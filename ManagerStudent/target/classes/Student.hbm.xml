@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Student" table="STUDENT">
+        <id name="student_id" type="int" column="student_id">
+            <generator class="assigned"/>
+        </id>
+        <property name="email" column="email" type="string"/>
+        <property name="password" column="password" type="string"/>
+        <property name="fname" column="fname" type="string"/>
+        <property name="lname" column="lname" type="string"/>
+        <property name="dob" column="dob" type="date"/>
+        <property name="phone" column="phone" type="string"/>
+        <property name="mobile" column="mobile" type="string"/>
+        <property name="date_of_join" column="date_of_join" type="date"/>
+        <property name="status" column="status" type="boolean"/>
+        <property name="last_login_date" column="last_login_date" type="date"/>
+        <property name="last_login_ip" column="last_login_ip" type="string"/>
+
+        <many-to-one name="Parent"
+                     class="Parent"
+                     column="parent_id"
+                     unique = "true"
+                     not-null="true"
+                     cascade="all"/>
+    </class>
+    <class name="Attendance" table="ATTENDANCE">
+        <id name="attendance_id" type="int" column="attendance_id">
+            <generator class="assigned"/>
+        </id>
+        <property name="date" column="date" type="date"/>
+        <property name="status" column="status" type="boolean"/>
+        <property name="remake" column="remark" type="text"/>
+
+        <many-to-one name="Student"
+                     class="Student"
+                     column="student_id"
+                     unique="true"
+                     not-null="true"
+                     cascade="all"/>
+
+    </class>
+    <class name="Classroom" table="CLASSROOM">
+        <id name="classroom_id" type="int" column="classroom_id">
+            <generator class="assigned"/>
+        </id>
+        <property name="year" column="year" type="date"/>
+        <property name="section" column="section" type="string"/>
+        <property name="remarks" column="remarks" type="string"/>
+        <property name="status" column="status" type="boolean"/>
+
+
+    </class>
+    <class name="Course" table="COURSE">
+        <id name="course_id" type="int" column="course_id">
+            <generator class="assigned"/>
+        </id>
+        <property name="name" column="name" type="string"/>
+        <property name="description" column="description" type="string"/>
+
+    </class>
+    <class name="Exam" table="EXAM">
+        <id name="exam_id" type="int" column="exam_id">
+            <generator class="assigned"/>
+        </id>
+        <property name="start_date" column="start_date" type="date"/>
+        <property name="name" column="name" type="string"/>
+
+    </class>
+    <class name="ExamType" table="EXAM_TYPE">
+        <id name="exam_type_id" type="int" column="exam_type_id">
+            <generator class="assigned"/>
+        </id>
+        <property name="name" column="name" type="string"/>
+        <property name="exam_type_desc" column="exam_type_desc" type="string"/>
+    </class>
+    <class name="Grade" table="GRADE">
+        <id name="grade_id" type="int" column="grade_id">
+            <generator class="assigned"/>
+        </id>
+        <property name="name" type="string" column="name"/>
+        <property name="grade_desc" type="string" column="grade_desc"/>
+    </class>
+    <class name="Parent" table="PARENT">
+        <id name="parent_id" type="int" column="parent_id">
+            <generator class="assigned"/>
+        </id>
+        <property name="email" column="email" type="string"/>
+        <property name="password" column="password" type="string"/>
+        <property name="fname" column="fname" type="string"/>
+        <property name="lname" column="lname" type="string"/>
+        <property name="dob" column="dob" type="date"/>
+        <property name="phone" column="phone" type="string"/>
+        <property name="mobile" column="mobile" type="string"/>
+        <property name="date_of_join" column="date_of_join" type="date"/>
+        <property name="status" column="status" type="boolean"/>
+        <property name="last_login_date" column="last_login_date" type="date"/>
+        <property name="last_login_ip" column="last_login_ip" type="string"/>
+    </class>
+    <class name="Teacher" table="TEACHER">
+        <id name="teacher_id" type="int" column="teacher_id">
+            <generator class="assigned"/>
+        </id>
+        <property name="email" column="email" type="string"/>
+        <property name="password" column="password" type="string"/>
+        <property name="fname" column="fname" type="string"/>
+        <property name="lname" column="lname" type="string"/>
+        <property name="dob" column="dob" type="date"/>
+        <property name="phone" column="phone" type="string"/>
+        <property name="mobile" column="mobile" type="string"/>
+        <property name="date_of_join" column="date_of_join" type="date"/>
+        <property name="status" column="status" type="boolean"/>
+        <property name="last_login_date" column="last_login_date" type="date"/>
+        <property name="last_login_ip" column="last_login_ip" type="string"/>
+    </class>
+</hibernate-mapping>

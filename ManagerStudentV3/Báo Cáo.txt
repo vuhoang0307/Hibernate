@@ -1,3 +1,0 @@
-﻿Em dựng được database
-mapping em vẫn đang bị lỗi nên chưa insert hay select được ạ :(
-Em xin phép nộp bài muộn cho anh vào 20h tối hôm nay 28/05/2017 ạ
