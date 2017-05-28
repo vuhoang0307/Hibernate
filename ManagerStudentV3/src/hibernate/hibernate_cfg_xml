@@ -11,18 +11,7 @@
         <property name="hibernate.connection.password">14020194</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
 
-        <!--<mapping class="java.Student"/>
-        <mapping class="java.Attendance"/>
-        <mapping class="java.Classroom"/>
-        <mapping class="java.ClassroomStudent"/>
-        <mapping class="java.Course"/>
-        <mapping class="java.Exam"/>
-        <mapping class="java.ExamResult"/>
-        <mapping class="java.ExamType"/>
-        <mapping class="java.Grade"/>
-        <mapping class="java.Parent"/>
-        <mapping class="java.Teacher"/>-->
-        <mapping resource="Student.hbm.xml"/>
+        <mapping file="Student.hbm.xml"/>
 
     </session-factory>
 </hibernate-configuration>

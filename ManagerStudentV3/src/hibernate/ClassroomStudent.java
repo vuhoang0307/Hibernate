@@ -1,7 +1,4 @@
-package java;
-
-import javax.persistence.Entity;
-import javax.persistence.Table;
+package hibernate;
 
 /**
  * Created by MINHHOANG-PC on 28/05/2017.

@@ -1,6 +1,4 @@
-package java;
-
-import javax.persistence.*;
+package hibernate;
 
 /**
  * Created by MINHHOANG-PC on 28/05/2017.

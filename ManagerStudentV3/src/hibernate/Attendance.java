@@ -1,5 +1,4 @@
-package java;
-import javax.persistence.*;
+package hibernate;
 import java.util.Date;
 
 /**

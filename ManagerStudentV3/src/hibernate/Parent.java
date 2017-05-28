@@ -1,37 +1,33 @@
-package java;
+package hibernate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
  * Created by MINHHOANG-PC on 28/05/2017.
  */
 
-public class Teacher {
-    private int teacher_id;
+public class Parent {
+    private int parent_id;
     private String email;
-    private String password;
+    private  String password;
     private String fname;
     private String lname;
     private Date dob;
     private String phone;
     private String mobile;
-    private String date_of_join;
+    private Date date_of_join;
     private boolean status;
     private Date last_login_date;
     private String last_login_ip;
 
 
-
-    public int getTeacher_id() {
-        return teacher_id;
+    public int getParent_id() {
+        return parent_id;
     }
 
-    public void setTeacher_id(int teacher_id) {
-        this.teacher_id = teacher_id;
+    public void setParent_id(int parent_id) {
+        this.parent_id = parent_id;
     }
 
     public String getEmail() {
@@ -90,11 +86,11 @@ public class Teacher {
         this.mobile = mobile;
     }
 
-    public String getDate_of_join() {
+    public Date getDate_of_join() {
         return date_of_join;
     }
 
-    public void setDate_of_join(String date_of_join) {
+    public void setDate_of_join(Date date_of_join) {
         this.date_of_join = date_of_join;
     }
 
@@ -122,8 +118,8 @@ public class Teacher {
         this.last_login_ip = last_login_ip;
     }
 
-    public Teacher(int teacher_id, String email, String password, String fname, String lname, Date dob, String phone, String mobile, String date_of_join, boolean status, Date last_login_date, String last_login_ip) {
-        this.teacher_id = teacher_id;
+    public Parent(int parent_id, String email, String password, String fname, String lname, Date dob, String phone, String mobile, Date date_of_join, boolean status, Date last_login_date, String last_login_ip) {
+        this.parent_id = parent_id;
         this.email = email;
         this.password = password;
         this.fname = fname;
